@@ -1,16 +1,139 @@
+@import 'normalize.less';
 @import 'fonts.less';
 @import 'settings.less';
+
+@menu-bg: #000a06;
+@white: #fff;
 
 body {
   font-family: 'PT Sans', sans-serif;
   min-width: 360px;
+}
+
+.wrapper {
   max-width: 1920px;
+  margin: 0 auto;
+  background-image: url('../img/promo-mobile.webp');
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: contain;
+
+  @media (min-width: 620px) {
+    background-image: url('../img/promo.webp');
+  }
 }
 
 .container {
-  max-width: 328px;
+  margin: 0 auto;
 
   @media @desktop {
     max-width: 1600px;
   }
+}
+
+.main-header {
+  min-height: 400px;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media @desktop-large {
+    padding-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.burger-menu,
+.button-cart {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  z-index: 10;
+  grid-row: 1 / 2;
+}
+
+.burger-menu {
+  padding: 10px 8px;
+  justify-self: start;
+  align-self: start;
+  grid-column: 1 / 2;
+
+  @media @desktop {
+    display: none;
+  }
+}
+
+.button-cart {
+  padding: 7px 9px;
+  justify-self: end;
+  align-self: start;
+  grid-column: 3 / 4;
+
+  @media @desktop {
+    place-self: center center;
+  }
+}
+
+.logo {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  @media @desktop {
+    grid-column: 1 / 2;
+  }
+}
+
+.main-site-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+
+  @media @desktop {
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+.main-nav-list {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  background-color: @menu-bg;
+  margin-top: 0;
+  margin-left: 0;
+  padding: 10px;
+  text-align: center;
+  display: none;
+
+  @media @desktop {
+    grid-column: 2 / 3;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 90px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+
+    @media @desktop {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+
+    @media @desktop-large {
+      margin-right: 56px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: @white;
+    font-weight: 700;
+  }
+}
+
+.show {
+  display: block;
 }
