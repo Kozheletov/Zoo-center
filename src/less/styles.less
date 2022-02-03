@@ -6,6 +6,9 @@
 @white: #fff;
 @accent-color: #ffd426;
 @text-color: #363636;
+@light-green: #51b800;
+@green: #158400;
+@orange: #ee8f00;
 
 body {
   font-family: 'PT Sans', sans-serif;
@@ -28,6 +31,8 @@ body {
 
 .container {
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 
   @media @desktop {
     max-width: 1000px;
@@ -35,6 +40,8 @@ body {
 
   @media @desktop-large {
     max-width: 1600px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -46,6 +53,10 @@ body {
   line-height: 130%;
   font-weight: 700;
   color: @accent-color;
+
+  @media @desktop-large {
+    font-size: 36px;
+  }
 }
 
 .main-header {
@@ -159,8 +170,6 @@ body {
 }
 
 .promo {
-  padding-left: 16px;
-  padding-right: 16px;
   margin-bottom: 130px;
 
   @media @desktop-large {
@@ -215,8 +224,6 @@ body {
 }
 
 .about {
-  padding-left: 16px;
-  padding-right: 16px;
   margin-bottom: 65px;
 
   @media @desktop-large {
@@ -248,6 +255,86 @@ body {
       max-width: 380px;
       font-size: 24px;
       margin-top: 0;
+    }
+  }
+}
+
+.services {
+  margin-bottom: 64px;
+
+  &__title {
+    margin-bottom: 32px;
+
+    @media @desktop-large {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__list {
+    .reset-list();
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+    gap: 32px;
+    justify-content: center;
+
+    @media @desktop-large {
+      grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
+      gap: 64px 32px;
+    }
+  }
+
+  &__element {
+    margin: 0;
+  }
+
+  &__element-title {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 150%;
+
+    @media @desktop-large {
+      font-size: 24px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 16px;
+
+    @media @desktop-large {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 150%;
+    text-decoration: none;
+    color: @light-green;
+    border: 2px solid @light-green;
+    box-sizing: border-box;
+    border-radius: 95px;
+    padding: 11px 22px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+
+    @media @desktop-large {
+      margin-right: 24px;
+      font-size: 16px;
+      padding: 17px 42px;
+      color: @green;
+      border: 2px solid @green;
+    }
+  }
+
+  &__link-orange-border {
+    border-color: @orange;
+    color: @orange;
+    margin-right: 0;
+
+    @media @desktop-large {
+      color: @orange;
+      border: 2px solid @orange;
     }
   }
 }
