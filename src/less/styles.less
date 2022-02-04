@@ -262,6 +262,10 @@ body {
 .services {
   margin-bottom: 64px;
 
+  @media @desktop {
+    margin-bottom: 160px;
+  }
+
   &__title {
     margin-bottom: 32px;
 
@@ -336,6 +340,67 @@ body {
       color: @orange;
       border: 2px solid @orange;
     }
+  }
+}
+
+.reviews {
+  margin-bottom: 64px;
+
+  @media @desktop-large {
+    margin-bottom: 160px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+
+    @media @desktop-large {
+      margin-bottom: 95px;
+    }
+  }
+
+  &__quote {
+    margin: 0;
+  }
+
+  &__list {
+    .reset-list();
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+    gap: 50px;
+  }
+
+  &__user {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    font-style: normal;
+  }
+
+  &__time {
+    display: block;
+    margin-bottom: 24px;
+
+    @media @desktop {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 24px;
+
+    @media @desktop-large {
+      max-width: 240px;
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    line-height: 150%;
+    max-width: 375px;
   }
 }
 
