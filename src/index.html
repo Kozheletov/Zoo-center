@@ -272,6 +272,45 @@
         </ul>
       </div>
     </footer>
+    <div class="popup-window">
+      <p class="poput__title">Запись на осмотр</p>
+      <form action="#" class="contact-form">
+        <p class="contacts-form__row">
+          <input class="contacts-form__input" type="text" placeholder="Сидоров Иван Иваныч" />
+        </p>
+        <p class="contacts-form__row">
+          <input class="contacts-form__input" type="tel" placeholder="+7 (953) 222-11-11" />
+        </p>
+        <p class="contacts-form__row">
+          <input class="contacts-form__input" type="email" placeholder="E-mail" />
+        </p>
+        <div class="contacts-form__row contacts-form__row_date-row">
+          <input class="contacts-form__input_calendar" type="date" name="calendar-form" id="calendar-form" />
+          <div class="contacts-form__date-block">
+            <span class="contacts-form__date-icon"></span>
+            <p class="contacts-form__date-output">
+              <span class="contacts-form__date-day">08.</span>
+              <span class="contacts-form__date-month">12.</span>
+              <span class="contacts-form__date-year">21</span>
+            </p>
+          </div>
+        </div>
+        <p class="contacts-form__row">
+          <button class="contact-form__button" type="button">Отправить</button>
+        </p>
+        <div class="contacts-form__row contacts-form__row_checkbox">
+          <label class="checkbox-label">
+            <input class="contacts-form_checkbox" type="checkbox" name="privacy-pocily" />
+            <span class="custom-checkbox"></span>
+            <div class="privacy-text">
+              Отправляя заявку, вы соглашаетесь с
+              <a class="link-to-privacy-page" href="#">Политикой конфиденциальности</a>
+            </div>
+          </label>
+        </div>
+        <button class="contacts-form__close-popup" type="button">&#x2715;</button>
+      </form>
+    </div>
     <script src="js/app.min.js"></script>
   </body>
 </html>
